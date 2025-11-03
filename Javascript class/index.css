@@ -1,26 +1,89 @@
-:root{ 
-    background: rgb(108, 108, 55);;
+:root {
+  --panel: #46280b; /* define your missing color variable */
 }
-    
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px 0;
-    text-align: center;
-}
-
-input, output {
-    border: 2px solid black;
-    border-radius: 5px;
-    padding: 4px;
+html,body{height:100%}
+body{
+margin:0;
+display:flex;
+align-items:center;
+justify-content:center;
+background: linear-gradient(180deg,var(--panel),#46280b);
+padding:24px;
+color:#dadcde;
 }
 
 button {
-    margin: 20px 0;
-    background: white;
-    color: black;
-    border-radius: 10px;
-    border: 1px solid black;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 5px 8px;
+  width:70px;
+  height:70px;
+  appearance:none;
+  border:0;
+  border-radius:10px;
+  padding:18px 12px;
+  font-size:18px;
+  font-weight:600;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#181819;
+  box-shadow:0 4px 10px rgba(2,6,23,0.6);
+  cursor:pointer;
+  transition:transform .08s ease, box-shadow .08s ease;
+}
+
+@media (max-width:420px){
+  .display{min-height:82px;padding:14px}.output{font-size:26px}button{padding:14px 10px;font-size:16px}
+}
+button:hover {
+  background-color: rgb(90, 40, 40);
+}
+
+#calculator {
+  width:300px;
+  max-width:100%;
+  margin: 50px auto;
+  border-radius:12px;
+  overflow:hidden;
+  background:linear-gradient(180deg,var(--panel),#46280b);
+  box-shadow:0 10px 30px rgba(2,6,23,0.6),  inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+.display {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: right;
+  color: rgb(252, 250, 253);
+  font-size: 1.5rem;
+  padding-right: 10px;   /* 👈 adds space on the right */
+  box-sizing: border-box; /* ensures padding doesn't stretch layout */
+}
+
+.cl {
+  width: 120px;
+  height: 40px;
+  background-color: brown;
+  margin: 2px auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.operator-btn {
+  background-color: brown;
+}
+
+.operator-btn:hover {
+  background-color:rgb(90, 40, 40);
+}
+
+.equal {
+    background-color: brown;
+    width: 300px;
+    height: 40px;
+    margin: 10px auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

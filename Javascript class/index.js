@@ -1,42 +1,47 @@
-function add(){
-  let num1=Number(document.getElementById("num1").value)
-    let num2=Number(document.getElementById("num2").value)
-    let result=num1+num2
-document.getElementById("result").textContent="Result:" +result
-}
-function subtract(){
-    let num1 =Number(document.getElementById("num1").value)
-    let num2 =Number(document.getElementById("num2").value)
-    let result=num1-num2
-    document.getElementById("result").textContent="Result:"+result
-}
-function divide(){
-   let num1 =Number(document.getElementById("num1").value)
-    let num2 =Number(document.getElementById("num2").value)
-    let result=num1/num2
-    document.getElementById("result").textContent="Result:"+result
-}
-function multiply(){
-   let num1 =Number(document.getElementById("num1").value)
-    let num2 =Number(document.getElementById("num2").value)
-    let result=num1*num2
-    document.getElementById("result").textContent="Result:"+result
-}
-function calculatePercentage() {
-      // Get the numbers entered by the user
-      let num1 = Number(document.getElementById("num1").value);
-      let num2 = Number(document.getElementById("num2").value);
+// Select the display element correctly
+const display = document.querySelector(".display");
 
-      // Check that both numbers are valid
-      if (num2 === 0) {
-        document.getElementById("result").textContent = "Cannot divide by zero.";
-        return;
-      }
+// send value to the input box
+function appendToDisplay(input) {
+  display.value += input;
+}
 
-      // Calculate the percentage
-      let result = (num1 / num2) * 100;
+// Clear the the input box
+function clearDisplay() {
+  display.value = "";
+}
 
-      // Display the result
-      document.getElementById("result").textContent =
-        `${num1} is ${percentage.toFixed(2)}% of ${num2}`;
-    }
+// To Calculate 
+function calculate() {
+  try {
+    const result = new Function("return " + display.value)();
+    display.value = result;
+  } catch (error) {
+    display.value = "Error";
+  }
+}
+
+// calculate percent
+function percent() {
+  try {
+    const result = parseFloat(display.value) / 100;
+    display.value = result;
+  } catch (error) {
+    display.value = "Error";
+  }
+}
+
+// ✅ Handle keyboard input
+document.addEventListener("keydown", (event) => {
+  const key = event.key;
+
+  // Allow numbers, operators, and dot
+  if (/[0-9+\-*/.%]/.test(key)) {
+    appendToDisplay(key);
+  }
+  // equal to (=)
+  else if (key === "=") {
+    event.preventDefault();
+    calculate();
+  }
+});
