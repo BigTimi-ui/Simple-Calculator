@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Website Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">YourBrand</div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="cta-btn">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Build Something Amazing Today</h1>
+        <p>Modern, responsive, and beautiful web experiences that make your brand stand out</p>
+        <div class="hero-buttons">
+            <a href="#" class="btn-primary">Get Started</a>
+            <a href="#" class="btn-secondary">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features" id="features">
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Lightning Fast</h3>
+            <p>Optimized performance ensures your website loads instantly, keeping visitors engaged and improving SEO rankings.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📱</div>
+            <h3>Fully Responsive</h3>
+            <p>Beautiful designs that work flawlessly on all devices, from mobile phones to large desktop screens.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Modern Design</h3>
+            <p>Contemporary aesthetics with smooth animations and intuitive user interfaces that captivate your audience.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Secure & Safe</h3>
+            <p>Built with security best practices to protect your data and maintain user trust.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>SEO Optimized</h3>
+            <p>Clean code and proper structure help search engines find and rank your content effectively.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">💎</div>
+            <h3>Premium Quality</h3>
+            <p>Attention to detail in every aspect ensures a professional and polished final product.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>About Our Vision</h2>
+            <p>We believe in creating digital experiences that not only look stunning but also deliver real results for your business.</p>
+            <p>Our team combines creativity with technical expertise to build websites that engage users, drive conversions, and help your brand grow in the digital landscape.</p>
+            <p>With years of experience and countless successful projects, we're here to transform your vision into reality.</p>
+        </div>
+        <div class="about-image"></div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="contact-content">
+        <h2>Get In Touch</h2>
+        <p>Ready to start your project? Let's talk about how we can help you succeed.</p>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 YourBrand. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
